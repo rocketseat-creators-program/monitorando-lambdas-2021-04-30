@@ -31,6 +31,13 @@ const get = async articleId => {
 
     const result = await dynamoDb.get(params).promise()
 
+    let a = 0
+
+    for(let i = 1; i < 100000; i++) {
+      a = a + i
+    }
+    console.log(a)
+
     return result.Item
 }
 
