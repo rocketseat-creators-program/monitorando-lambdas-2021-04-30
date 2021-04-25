@@ -1,12 +1,16 @@
-# Rocketseat - Exemplo de API REST usando Serverless
+# Monitorando e otimizando APIs feitas com AWS Lambda
 
-Este repositório consiste de uma API feita em Node.js que usa serverless framework, AWS API Gateway, Lambdas e DynamoDB.
+<img src="https://storage.googleapis.com/golden-wind/experts-club/capa-github.svg" />
 
-Na branch `complete` você encontra a versão final deste workshop.
+Quando criamos nossas APIs usando serverless, tudo parece maravilhoso em um primeiro momento, mas conforme nosso uso e nossa carga aumenta, começamos a perceber algumas limitações (muitas vezes quando tudo já está pegando fogo!). Neste workshop vemos quais métricas são importantes e como podemos tirar proveito das ferramentas da AWS para achar gargalos em nossas aplicações. Também veremos alguns truques que podem melhorar a performance da sua aplicação como um todo.
 
-## Rodando o projeto
+Este repositório consiste de uma API feita em Node.js que usa serverless framework, AWS API Gateway, Lambdas, DynamoDB e SNS.
 
-O foco do workshop foi rodar a aplicação direto na AWS,, portanto não abordamos como rodar local. Para saber como você pode rodar local, olhe a sessão [Rodando localmente](#rodando-localmente).
+## Expert
+
+| [<img src="https://avatars.githubusercontent.com/u/711732?s=460&u=6b1039f8a921c5733d92d13b2971c55157fee005&v=4" width="75px;"/>](https://github.com/askmon) |
+| :-: |
+|[André Spanguero Kanayama](https://github.com/askmon)|
 
 ### Requisitos
 
@@ -20,19 +24,6 @@ O foco do workshop foi rodar a aplicação direto na AWS,, portanto não abordam
 2. Configure o serverless para usar essa conta, isso pode ser feito usando o serverless: `serverless config credentials -o --provider aws --key <chave> --secret <secret>`
 3. Depois de configurar o `serverless.yml` com os recursos desejados, fazer deploy usando o comando `serverless deploy`
 
-## Rodando localmente
-
-Durante o workshop, sempre que fazíamos uma modificação, fazíamos o deploy para testar. Em aplicações reais isso se torna inviável, portanto, para conseguir testar com mais facilidade, sugiro o estudo de duas ferramentas:
-
-- [Serverless Offline Plugin](https://www.serverless.com/plugins/serverless-offline) - emula lambdas e API Gateway na sua máquina, subindo um servidor para gerenciar as requisições.
-- [Serverless DynamoDB Plugin](https://www.serverless.com/plugins/serverless-dynamodb-local) - plugin do serverless para rodar o DynamoDB localmente. Também existe a opção de usar [Docker para rodar o DynamoDB](https://hub.docker.com/r/amazon/dynamodb-local/).
-
 ## Links e referências
 
 - [Como criar um usuário no IAM](https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/id_users_create.html#id_users_create_console) - Caso você não tenha familiaridade com a criação de usuários na AWS usando IAM
-- [Serverless Express Plugin](https://www.serverless.com/plugins/serverless-express) - Caso tenha interesse em trabalhar com Express ou Koa, é possível usando um plugin do Serverless. Porém vale sempre pesar o que é melhor para o seu caso de uso, por exemplo, o uso do Express pode aumentar o seu tempo de cold start um pouco.
-- [Serverless Middleware Plugin](https://www.serverless.com/plugins/serverless-middleware) - Plugin para a criação de middlewares usando Serverless
-
-## Problemas e dúvidas
-
-Caso tenha qualquer dúvida, problema ou sugestão, fique à vontade para criar uma issue neste repo, e eu responderei assim que possível.
