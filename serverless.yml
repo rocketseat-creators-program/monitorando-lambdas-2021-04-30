@@ -15,12 +15,11 @@ provider:
   runtime: nodejs12.x
   stage: dev
   region: us-east-1
-  memorySize: 128
   tracing:
     apiGateway: true
     lambda: true
   deploymentBucket:
-    name: articles-rocketseat-deployment-bucket
+    name: articles-rocketseat-deployment-bucket-1234
     serverSideEncryption: AES256
   iamRoleStatements:
     - Effect: Allow

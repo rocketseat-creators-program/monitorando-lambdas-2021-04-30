@@ -4,11 +4,11 @@ const AWS = AWSXRay.captureAWS(require('aws-sdk'))
 const articleRepository = require('./repository/article')
 
 const create = async event => {
-  const article = JSON.parse(event.body);
+  const article = JSON.parse(event.body)
   const result = await articleRepository.create(article)
   return {
     statusCode: 200,
-    body: JSON.stringify(result)
+    body: JSON.stringify(result),
   }
 }
 
@@ -20,16 +20,16 @@ const get = async event => {
 
   await sns.publish({
     Message: JSON.stringify(result),
-    TopicArn: process.env.CF_ArticleRequestedTopic
+    TopicArn: process.env.CF_ArticleRequestedTopic,
   }).promise()
 
   return {
     statusCode: 200,
-    body: JSON.stringify(result)
+    body: JSON.stringify(result),
   }
 }
 
 module.exports = {
   create,
-  get
+  get,
 }
