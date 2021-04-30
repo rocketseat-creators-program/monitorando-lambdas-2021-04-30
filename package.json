@@ -19,7 +19,7 @@
   "license": "ISC",
   "husky": {
     "hooks": {
-      "pre-push": "npm run lint && npm run test:cover"
+      "pre-push": "npm run lint"
     }
   },
   "dependencies": {
