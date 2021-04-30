@@ -1,6 +1,6 @@
 const axios = require('axios')
 
-const API_URL = 'https://mbgy9nfi0f.execute-api.us-east-1.amazonaws.com/dev/article/167c76e1-330a-4915-9500-7b38a41e8808'
+const API_URL = '<API_URL>'
 
 console.log('Starting to make requests')
 
