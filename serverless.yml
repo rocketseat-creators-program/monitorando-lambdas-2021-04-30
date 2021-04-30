@@ -15,6 +15,7 @@ provider:
   runtime: nodejs14.x
   stage: dev
   region: us-east-1
+  memorySize: 128
   tracing:
     apiGateway: true
     lambda: true
